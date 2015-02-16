@@ -1,0 +1,11 @@
+<OGRVRTDataSource>
+  <OGRVRTLayer name="california_counties">
+    <SrcDataSource relativeToVRT="1">shapefiles/cnty24k09_1_multipart.shp</SrcDataSource>
+    <SrcLayer>cnty24k09_1_multipart</SrcLayer>
+    <Field name="name" src="NAME_PCASE" type="STRING"/>
+    <Field name="fullname" src="FMNAME_PC" type="STRING"/>
+    <Field name="abbrev" src="ABBREV" type="STRING"/>
+    <Field name="abcode" src="ABCODE" type="STRING"/>
+    <Field name="ansi" src="ANSI" type="STRING"/>
+  </OGRVRTLayer>
+</OGRVRTDataSource>
