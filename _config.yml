@@ -11,17 +11,17 @@
 # Fill out dataset variables below
 #
 author:
-  name: 
-  email: 
+  name: Quinn Hart
+  email: qjhart@ucdavis.edu
 keywords:
   - 
-genre:
+genre: Spatial Data
 publisher:
-  name: 
-  url: 
-  description: 
+  name: University of California, Davis
+  url: https://www.library.ucdavis.edu
+  description: Supporting research, teaching and learning in every discipline, the UC Davis Library is the academic heart of the university.
 # ISO formatted, ex: "2016-03-09T17:27:20.578Z" 
-datePublished: 
+datePublished: 2015-02-15
 
 # Build settings
 markdown: kramdown
