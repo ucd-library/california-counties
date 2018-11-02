@@ -6,6 +6,7 @@ layout: home
 
 # Make a more human readable title for the project
 title: California Counties
+
 ---
 
 {{page.title || site.github.project_title}}
@@ -17,8 +18,9 @@ title: California Counties
 
 {% if site.genre %}Genre: {{site.genre}}{% endif %}    
 
-{% if site.rights %} The data for this project is under the [{{ site.rights }}]
+{% if site.rights %} The data for this project is under the [{{ site.rightsinfo["{{site.rights}}"].prefLabel }}][{{site.rightsinfo["{{sites.rights}}].url}}]
 {% endif %}
+
 This project is released under the {{site.license.name}}][{{site.license.url}}].
 
 
