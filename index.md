@@ -17,12 +17,21 @@ title: California Counties
 
 {% if site.genre %}Genre: {{site.genre}}{% endif %}    
 
+{% if site.rights %} The data for this project is under the [{{ site.rights }}]
+{% endif %}
+This project is released under the {{site.license.name}}][{{site.license.url}}].
+
+
 Distribution
 ------------
 This dataset was last published {{site.datePublished}}, by [{{page.publisher.name }} | {{site.publisher.name }}][publisher]
 {% if site.publisher.description %}{{site.publisher.description}}{% endif %}
 
 Please see the project [releases] for direct access to the dataset. You can also vist the project [github] page.
+
+{% for release in site.github.releases %}
+  * [{{ release.name }}][{{ release.url }}] ({{release.published_at}} - {{ release.body }}
+{% endfor %}
 
 {% if site.author.name | site.author.email %}
 Author
