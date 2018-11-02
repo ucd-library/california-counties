@@ -18,11 +18,13 @@ title: California Counties
 
 {% if site.genre %}Genre: {{site.genre}}{% endif %}    
 
-{% if site.rights %} The data for this project is under the [{{ site.rightsinfo["{{site.rights}}"].prefLabel }}][{{site.rightsinfo["{{sites.rights}}].url}}]
+{% if site.rights %} 
+The data for this project is under the [{{ site.rightsinfo.{{site.rights}}.prefLabel }}][{{site.rightsinfo.{{sites.rights}}.url}}]
 {% endif %}
 
-This project is released under the {{site.license.name}}][{{site.license.url}}].
-
+{% if site.license %}
+This project is released under the [{{site.license.name}}][{{site.license.url}}].
+{% endif %}
 
 Distribution
 ------------
@@ -32,7 +34,7 @@ This dataset was last published {{site.datePublished}}, by [{{page.publisher.nam
 Please see the project [releases] for direct access to the dataset. You can also vist the project [github] page.
 
 {% for release in site.github.releases %}
-  * [{{ release.name }}][{{ release.url }}] ({{release.published_at}} - {{ release.body }}
+  * [{{ release.name }}]({{ release.html_url }}) ({{release.published_at}}) - {{ release.body }}
 {% endfor %}
 
 {% if site.author.name | site.author.email %}
@@ -52,4 +54,4 @@ SEO
 [github]: {{site.github.clone_url}}
 {% if site.publisher.url %}
 [publisher]: {{site.publisher.url}}
-{% endif %}
+{%  endif %}
