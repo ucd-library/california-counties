@@ -3,39 +3,36 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: home
-foo: bar
+
+title: California Counties
 ---
 
-# {{site.github.project_title}}
+{{page.title || site.github.project_title}}
+===========================================
+*{{site.github.project_tagline}}*
+[github]
+{% if site.keywords %}**{{ site.keywords }}** {% endif %}
+{% if site.genre %}Genre: {{site.genre}}{% endif %}    
 
-{{ page.foo }}
+Distribution
+------------
+This dataset was last published {{site.datePublished}}, by [{{page.publisher.name }} | {{site.publisher.name }}][publisher]
+{% if site.publisher.description %}{{site.publisher.description}}{% endif %}
 
-    {% if site.github %},"name": "{{site.github.project_title}}"{% endif %}
-    {% if site.github %},"description": "{{site.github.project_tagline}}"{% endif %}
-    {% if site.github %},"url": "{{site.github.url}}"{% endif %}
-    {% if site.datePublished %},"datePublished": "{{site.datePublished}}"{% endif %}
-    {% if site.genre %},"genre": "{{site.genre}}"{% endif %}
-    {% if site.publisher %},"publisher": {
-      "@type": "Organization"
-      {% if site.publisher.name %},"name": "{{site.publisher.name}}"{% endif %}
-      {% if site.publisher.url %},"url": "{{site.publisher.url}}"{% endif %}
-      {% if site.publisher.description %},"description": "{{site.publisher.description}}"{% endif %}
-    }{% endif %}
-    {% if site.github %},"distribution": [
-      {
-        "@type": "DataDownload",
-        "name": "{{site.github.project_title}} Releases",
-        "contentUrl": "{{site.github.releases_url}}",
-      }, 
-      {
-        "@type": "DataDownload",
-        "name": "{{site.github.project_title}} Git",
-        "contentUrl": "{{site.github.clone_url}}"
-      }
-    ]{% endif %}
-    {% if site.author %},"author": {
-      "@type": "Person"
-      {% if site.author.name %},"name": "{{site.author.name}}"{% endif %}
-      {% if site.author.email %},"email": "{{site.author.email}}"{% endif %}
-    }{% endif %}
-    {% if site.keywords %},"keywords": {{ site.keywords | jsonify }} {% endif %}
+Please see the project [releases] for direct access to the dataset. 
+
+{% if site.author.name | site.author.email %}
+Author
+------
+{{site.author.name}} <{{site.author.email}}>
+{% endif %}
+
+Citation
+--------
+
+SEO
+---
+
+[github]: {{site.github.url}}
+[releases]: {{site.github.releases_url}}
+[publisher]: {{site.publisher.url}}
