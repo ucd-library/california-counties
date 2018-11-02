@@ -46,7 +46,7 @@ Citation
 
 SEO
 ---
-{% include README.md %}
+{% include ../README.md %}
 
 [website]: {{site.github.url}}
 [releases]: {{site.github.releases_url}}
