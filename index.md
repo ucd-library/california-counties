@@ -16,9 +16,12 @@ title: California Counties
 
 {% if site.keywords %}**{{ site.keywords }}** {% endif %}
 
-{% if site.genre %}Genre: {{site.genre}}{% endif %}    
+{% if site.genre %}Genre: {{site.genre}}{% endif %}
 
-{% if site.rights %} 
+{% if site.rights %}
+{{ sites.rights }}
+Or: {{site.rightsinfo.{{site.rights}}.prefLabel }}
+
 The data for this project is under the [{{ site.rightsinfo.{{site.rights}}.prefLabel }}][{{site.rightsinfo.{{sites.rights}}.url}}]
 {% endif %}
 
