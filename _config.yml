@@ -14,14 +14,14 @@ author:
   name: Quinn Hart
   email: qjhart@ucdavis.edu
 keywords:
-rights: Inc-EDU
-  - 
+rights: InC-EDU
+  -
 genre: Spatial Data
 publisher:
   name: University of California, Davis
   url: https://www.library.ucdavis.edu
   description: Supporting research, teaching and learning in every discipline, the UC Davis Library is the academic heart of the university.
-# ISO formatted, ex: "2016-03-09T17:27:20.578Z" 
+# ISO formatted, ex: "2016-03-09T17:27:20.578Z"
 datePublished: 2015-02-15
 
 # Copyright - By default we encourge rightsstatement.org copyrights for data.  You can add your own below if you prefere
@@ -29,7 +29,7 @@ rightsinfo:
   InC-EDU:
     url:http://rightsstatements.org/vocab/InC-EDU/1.0/
     prefLabel:In Copyright - Educational Use Permitted
-    
+
 
 # Build settings
 markdown: kramdown
